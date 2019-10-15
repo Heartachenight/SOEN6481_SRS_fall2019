@@ -1,0 +1,801 @@
+\documentclass[11pt,oneside]{book}
+\usepackage[left=0.75in,top=0.6in,right=0.75in,bottom=1in]{geometry}
+\usepackage[toc,page]{appendix}
+\usepackage{graphicx}
+\usepackage{lipsum}
+\usepackage{caption}
+\usepackage{biblatex}
+
+ \usepackage{url}
+\addbibresource{ref.bib}
+
+\begin{document}
+
+\captionsetup[figure]{margin=1.5cm,font=small,labelfont={bf},name={Figure},labelsep=colon,textfont={it}}
+\captionsetup[table]{margin=1.5cm,font=small,labelfont={bf},name={Table},labelsep=colon,textfont={it}}
+\setlipsumdefault{1}
+
+\frontmatter
+
+\begin{titlepage}
+
+
+\begin{center}
+{\LARGE \textbf{SOEN : 6481}}\\[1cm]
+\linespread{1.2}\huge {\bfseries SOFTWARE SYSTEMS REQUIREMENTS SPECIFICATION}\\[1cm]
+\linespread{1}
+\includegraphics[scale=0.6]{images/concordia-logo.png}\\
+\vspace{3em}
+{\large \emph{Submitted by : }}\\
+{\Large 40087470 : Aditya Surve}\\
+{\Large 40096078 : Birjot Singh}\\
+{\Large 40042813 : Gaganpreet Singh}\\
+{\Large 40080301 : Jaskaran Singh Sodhi }\\
+{\Large 40081751 : Kalpesh Vasant Thakare }\\
+{\Large 40071051 : Sai Abhishek Thorikonda}\\[1cm]
+{\large \emph{Professor:} P. Kamthan}\\[1cm] % if applicable
+\large Department of Computer Science and Software Engineering\\[0.3cm] 
+CONCORDIA UNIVERSITY\\[1cm]
+\end{center}
+
+\end{titlepage}
+
+%\chapter*{\Large \center Abstract}
+%want this
+
+%\chapter{Acknowledgement}
+
+
+
+%\vspace{25em}
+
+%\begin{flushleft}
+%Sincerely,
+%\newline\newline
+%Team I
+%\newline\newline
+%October 14, 2019
+%\end{flushleft}
+
+\tableofcontents
+\listoffigures
+\listoftables
+
+
+
+\mainmatter
+\chapter{Problem 1}
+
+\section{Brief Description of TVM}
+
+
+A Ticket Vending Machine that is a TVM in this report, could be a stationary human interaction gadget established at places to grant unique set of services to users.  A Ticket Vending Machine helps in buying tickets/travel pass for a mode of transportation. A Ticket Vending Machine assists in shopping for tickets/travel passes for a means of transportation and these tickets and passes can be utilized for both trains as well as buses.\newline\newline
+We have viewed the ticket vending machine used in Metro stations for our project which is broadly used in Montreal (Quebec, Canada).  The system serves the portability desires of local people and guests by advertising an effective and environmentally friendly public transit system. This TVM gives single way one-trip pass, two-way pass, round-trip pass, evening passes, weekly pass, monthly pass and numerous other passes to clients depending on the necessities. Customers are given the choices to pick the type of pass/ticket and thereafter the payment strategies. The TVM selected is of explicit interest for us because it manages different use cases like payment transaction, security, authorization and includes several stakeholders compared to the TVM’s used for different functions.\newline\newline
+The machine provides the services in a bilingual way i.e. French and English, by taking into the thought of National and common interest. A registered user is given an electronic card known as the E-Card that permits him/her to recharge or obtain tickets on-demand using the TVM. This card can be recharged once a month or in four months for its use. The commuters who do not have this E-Card, they can purchase a printed pass. They can pay for more than one pass by choosing the quantity of passes. The TVM has built-in capability to guarantee satisfactory security to avoid false utilization by consolidating security checks with monetary institutions for transaction. After the consumer makes payment and the financial institution verifies it, the client gets the printed pass(s). Also, the printed tickets have time constraint. It must be utilized within a week, after which the tickets are invalid.\newline\newline
+In each metro station, there is a minimum of one Ticket Vending Machine. To shield the good thing about the client, it has a very robust safety and network stability. The network of systems builds a stable community to make certain that thousands of users can use the system and reliably count on its service.
+
+
+\chapter{Problem 2}
+\section{Context of Use Model (CUTVM)}
+
+\begin{figure}[htp]
+\includegraphics[width = 10cm]{images/prob2.PNG} 
+    \centering
+    \caption{List of Contextual Factors }
+\end{figure}
+\newpage
+
+\section{Details of Contextual Factors:}
+
+\begin{enumerate}
+    \item User:
+        \begin{itemize}
+        
+        
+        
+         \item	Age: Minimum age of 10 years because of a person at this age capable of travel on an in-dividual basis.
+ \item Skills: An individual can understand French or English language. No programming lan-guage is required. 
+ \item Experiences: No need of any involvement. It is a decent and positive point on the off chance that he/she utilizes a similar software system however not required. 
+ \item Education/Training: No specific education and coaching are needed. But a person need to be capable to read in English or the French language.
+ \item Mental and Physical Attributes: It is suitable for humans in wheelchairs and a character have to also mentally stable. However blind people are also able to use it. (People apprehend ‘Braille’ letters as written on the keypad).
+ \item Emotion: No need for feelings but the individual has the staying power to continue to be in line.
+ 
+        \end{itemize}
+    
+    
+    \item User Role:
+        \begin{itemize}
+        \item Registered: A registered User with STM Opus Charged Card can travel from one place to another without purchasing a ticket 
+\item Non Registered: A Non-Registered Client can too utilize the STM by buying the ticket from the STM TVM and after that can travel. He has numerous choices of se-lecting distinctive sorts of passes depending on his need.
+
+        
+        
+        
+ 
+        \end{itemize}
+    
+    
+  
+    \item User Task:
+        \begin{itemize}
+        
+      \item  Task-Specific Goals: Accept ticket fair in the form of money (Canadian dollar), cred-it/debit card, generate ticket and also recharge Metro Card.
+\item The Criticality of Tasks: Tasks should be clear (say ticket printing quality must be
+good enough) and in proper sequence (means selecting ticket type process comes
+first then the payment process).
+\item Dependency: LAN, WAN (for bank and other processes at the back end),
+Power Connection, Ticket Paper (Paper on which ticket will be printed).
+\item Duration of Use: TVM for metro tickets is located in the metro station, it is available from 5.30 am to 1 am according to Canada time zone. The whole process starting from se-lecting the ticket type, ticket payment and generation of the ticket will take a minimum time of 1min after that session expires. If TVM remains ideal for 30sec it shifts-to ideal mode to save energy.
+\item Risks from Error: Error occurs in between payment process and ticket generation process may lead to deduction of money and no ticket generation. Invalid credit/debit card, wrong pin number and amount leads to a breakdown of the ticket generation process.
+
+        
+ 
+        \end{itemize}
+        
+    \item User Goal:
+        \begin{itemize}
+        
+        \item Overall Goal for Software System Use: Customer should complete the transaction of buying the ticket in an efficient manner.
+\item The criticality of Goal: Ticket created ought to be of good quality, no wastage of paper by any means.
+
+        
+ 
+        \end{itemize}
+        
+    \item User Activity:
+        \begin{itemize}
+        
+       \item Standing: System can be used in standing position. Minimum height of 3 - 3.5 feet require to operate.
+\item Sitting: Set screen and keyboard at a certain angle so it can be easily operated while sit-ting in a wheelchair if user is physically impaired.
+
+        
+ 
+        \end{itemize}
+    
+    \item Spatiotemporal:
+        \begin{itemize}
+     
+\item Time zone: Every transaction carried out have to be saved on the server database in standard time (for eg. GMT)
+\item Current time: Ticket is bought according to the local time 
+\item Location: Available nearly at every STM station 
+\item Direction: Located at the entrance or on departure side. 
+
+
+ 
+        \end{itemize}
+        
+    \item Natural:
+        \begin{itemize}
+        
+       \item Light: The machine does not affect by bright and dim light. The screen of machine ad-just according to surrounding light.
+\item Temperature: The machine should have temperature control system so that able to work at any temperature (warm/cold).
+\item Sound: Also have a sound mechanism so that blind people can use it. 
+
+
+        
+ 
+        \end{itemize}
+        
+         
+  
+    
+    
+    \item Technical Environment:
+    
+        \begin{itemize}
+            
+ \item Hardware:
+ \begin{itemize}
+ 
+\item Processor Speed: Enough speed so that handles all the processes efficiently.
+\item Screen: VGA 10” touch and manual screen.
+\item Keyboard: Interactive Number Keypad should be appropriate to be pressed and visible. Also with Braille Letters so that blind people use it.
+
+ \end{itemize} 
+ \item System Software:
+ \begin{itemize}
+ 
+\item Operating System: Easy to use and user-friendly (such as Windows).
+\item Server: Need server for backup
+\item Cloud Service: It provides database backup if the case of network and system failure.
+
+ \end{itemize} 
+
+\item Reliability: Have the UPS system in case of power failure.
+
+        \end{itemize}
+
+
+\item Social Environment:
+\begin{itemize}
+\item	Legal Constraints: installation and utilization must be approved and authorized by the government.
+
+\end{itemize}       
+  
+\end{enumerate}
+
+
+
+\chapter{Problem 3}
+
+\section{Domain Model Introduction}
+A domain model in problem solving and software engineering is a conceptual model of all the topics related to a specific problem. It describes the various entities, their attributes, roles, and relationships, plus the constraints that govern the problem domain. It does not describe solutions to the problem. [1] It represents the environment in which a solution will have to operate, as well as the problem itself. [2]
+
+\section{Domain Model Diagram}
+
+\begin{figure}[htp]
+\includegraphics[width = 14cm]{images/image3.jpg} 
+    \centering
+    \caption{Domain Model}
+\end{figure}
+
+\section{Domain Model Description }
+
+\begin{itemize}
+\item Bank: \\ Represents an entity which validates payments when the user performs a ticket pur-chasing transaction using cards (credit/debit). 
+
+\item Payment:\\ 
+ Represents different modes of payment which can either be Cash, Debit Card or Credit Card.
+
+\item Credit Card: \\
+Represents an electronic card associated with a credit account of user in a bank, which is used for buying tickets or to facilitate recharging of an OPUS card. It has a valid card number and a pin number. 
+
+\item Debit Card: \\
+ Represents an electronic card associated with a chequing or savings account of a us-er in bank, which is used for buying tickets or to facilitate recharging of an OPUS card. It has a valid card number and a pin number. 
+
+\item Cash:\\
+Represents cash, as a mode of payment without interacting with the bank. 
+
+\item Metro Opus Card:\\
+ Represents a chip integrated plastic card used to store accounts and payments for users. Issued usually for regular users for purchase of tickets and travel. 
+
+\item User:\\
+ Represents a person/entity who interacts with the system and executes many actions like recharging metro cards or purchasing metro tickets. (eg. Traveller or commuter, etc.)
+
+\item TVM: \\
+Represents a machine that allows users to purchase tickets, process payment 
+and print receipts. The machine consists of hardware and software components. 
+
+\item Receipt: \\ 
+ Represents a paper or email proof of the transaction result. It can be a success 
+or a failure result.
+
+\item Pass: \\
+ Represents a paper based card used for non regular users for a limited time. 
+It can use for one way travel or two way travel, etc
+
+
+
+\end{itemize}
+
+\section{Relationships}
+The relationships between classes need to be defined. Multiplicity describes how many     instances of one class can be associated with one instance of the related class. 
+Some of the multiplicity symbols, we used in our Domain Model are: 
+\begin{itemize}
+\item   1  :  Exactly one;
+\item   0..1  :  Zero or one; 
+\item 0..*  :  Zero or more; 
+\item 1..*  :  One or more; 
+
+\end{itemize}
+
+\begin{figure}[htp]
+\includegraphics[width = 12cm]{images/table2.PNG} 
+    \centering
+     \caption{List of All concepts and their Relationships}
+\end{figure}
+
+
+\chapter{Problem 4}
+\section{Different Views for Use Case}
+
+
+\begin{figure}[htp]
+\includegraphics[width = 15cm]{images/image4.jpg} 
+    \centering
+    \caption{Positive Use Case Scenario}
+\end{figure}
+\clearpage
+
+\begin{figure}[htp]
+\includegraphics[width = 18cm]{images/image6.jpg} 
+    \centering
+    \caption{Negative Use Case Scenario}
+\end{figure}
+\clearpage
+
+
+
+
+
+
+
+
+\section{Description of relevant Use Cases:}
+\begin{table}[h]
+\centering
+\begin{tabular}{|p{2.4cm}|p{11cm}|}
+\hline
+{Use Case Id: } & {UC1} \\
+\hline
+{Use case name:} & {Language Selection}\\
+\hline
+{Actors: } & {Primary: User}\\
+\hline
+{Description:} & {User have to select the language (French, English) he/she is comfortable with. }\\
+\hline
+
+{Trigger:  } & {Selecting the Manual mode option.}\\
+\hline
+{Preconditions:  } & {Selection of either Manual mode or voice Control mode}\\
+\hline
+{Postconditions:} & {The machines User interface will appear in the selected language}\\
+\hline
+{Normal Flow: } & {
+\begin{itemize}
+\item	The TVM will display the option of language (French/English).
+\item	User will have to choose one of the two options or else the TVM follows the default language.
+
+\end{itemize}
+}\\
+\hline
+{Exception Flow: } & {User cancelling the process}\\
+\hline
+{Priority:  } & {High}\\
+\hline
+{Note:  } & {User can select one of the 2 languages specified (French, English)}\\
+\hline
+\end{tabular}
+\caption{Language Selection}
+\end{table}
+
+
+
+
+
+
+\begin{table}[h]
+\centering
+\begin{tabular}{|p{2.4cm}|p{11cm}|}
+\hline
+{Use Case Id: } & {UC2} \\
+\hline
+{Use case name:} & {Voice Control}\\
+\hline
+{Actors: } & {Primary: User}\\
+\hline
+{Description:} & { If the user finds it difficult to operate the system manually, he/she can choose voice control option to perform the transactions }\\
+\hline
+{Trigger:  } & {Selecting the voice Control option}\\
+\hline
+{Preconditions:  } & {Selection of either Manual mode or voice Control mode}\\
+\hline
+{Postconditions:} & {The machines voice control system responds to the user}\\
+\hline
+{Normal Flow: } & {
+\begin{itemize}
+\item	The TVM will display the option of voice control/Manual.
+\item	User will choose one of the two options.
+ 
+\end{itemize}
+}\\
+\hline
+{Exception Flow: } & {User cancelling the process}\\
+\hline
+{Priority:  } & {High}\\
+\hline
+{Note:  } & {User can select one of the 2 languages specified (French, English)}\\
+\hline
+\end{tabular}
+\caption{Voice Control}
+\end{table}
+
+
+\begin{table}[h]
+\centering
+\begin{tabular}{|p{2.4cm}|p{11cm}|}
+\hline
+{Use Case Id: } & {UC3} \\
+\hline
+{Use case name:} & {Type of Ticket}\\
+\hline
+{Actors: } & {Primary: User}\\
+\hline
+{Description:} & {User has to select the type of ticket. (One way Pass/Two Way Pass/ Full Day Pass) and the number of fares.  }\\
+\hline
+ 
+{Trigger:  } & {Selecting the buy ticket.}\\
+\hline
+{Preconditions:  } & {Selection of either Manual mode or voice Control mode and the language selected.}\\
+\hline
+{Postconditions:} & {User selects the type of ticket.}\\
+\hline
+{Normal Flow: } & {
+\begin{itemize}
+\item	The TVM will display the option of language (French/English).
+\item	User will have to choose one of the two options or else the TVM follows the default language.
+\item	TVM displays either to buy One Way Ticket/Two Way Ticket/ Full Day Ticket.
+\item	User selects required ticket type.
+\item	User selects the number of tickets
+
+\end{itemize}
+}\\
+\hline
+{Exception Flow: } & {User cancelling the process}\\
+\hline
+{Priority:  } & {High}\\
+\hline
+{Note:  } & {The Fares may depend on the type of ticket selected.)}\\
+\hline
+\end{tabular}
+\caption{Type of Ticket}
+\end{table}
+
+
+
+\begin{table}[h]
+\centering
+\begin{tabular}{|p{2.4cm}|p{11cm}|}
+\hline
+{Use Case Id: } & {UC4} \\
+\hline
+{Use case name:} & {Recharge E-Card}\\
+\hline
+{Actors: } & {Primary: User, Secondary: Bank}\\
+\hline
+{Description:} & {User recharges his Rechargeable card.}\\
+\hline
+ 
+{Trigger:  } & {Selecting Recharge card option.}\\
+\hline
+{Preconditions:  } & {Card must be valid, and in proper condition.}\\
+\hline
+{Postconditions:} & {Rechargeable card will be recharged for certain duration depending on the amount paid by the user.}\\
+\hline
+{Normal Flow: } & {
+\begin{itemize}
+\item	The TVM will display the option of language (French/English).
+\item	User will have to choose one of the two options or else the TVM follows the default language.
+\item	TVM displays either to buy Rechargeable/Non-Rechargeable ticket.
+\item	User selects required ticket type.
+\item	User selects the payment option (Credit/Debit/Cash)
+\item	User enters his/her pin number (if Credit/Debit card is inserted)
+\item	Users card is recharged
+
+ 
+\end{itemize}
+}\\
+\hline
+{Exception Flow: } & {
+\begin{itemize}
+\item	User cancelling the process
+\item	Users rechargeable card is expired or in a bad condition
+\item	User entering the wrong PIN number.
+\end{itemize}
+}\\
+\hline
+{Priority:  } & {High}\\
+\hline
+{Note:  } & {
+\begin{itemize}
+\item	The Fares may depend on the type of ticket selected.
+\item	User must enter Valid Pin number.
+\end{itemize}}\\
+\hline
+\end{tabular}
+\caption{Recharge E-Card}
+\end{table}
+
+\begin{table}[h]
+\centering
+\begin{tabular}{|p{2.4cm}|p{11cm}|}
+\hline
+{Use Case Id: } & {UC5} \\
+\hline
+{Use case name:} & {Purchase Ticket}\\
+\hline
+{Actors: } & {Primary: User, Secondary: Bank}\\
+\hline
+{Description:} & {User selects all the required conditions to purchase a Ticket.}\\
+\hline
+ 
+{Trigger:  } & {Selecting Purchase Ticket option.}\\
+\hline
+{Preconditions:  } & User selects the type of ticket and number of tickets.\\
+\hline
+{Postconditions:} & {Payment has been made and ticket is printed.}\\
+\hline
+{Normal Flow: } & {
+\begin{itemize}
+\item	The TVM will display the option of language (French/English).
+\item	User will have to choose one of the two options or else the TVM follows the default language.
+\item	TVM displays either to buy Rechargeable/Non-Rechargeable ticket.
+\item	User selects Non-Rechargeable ticket.
+\item	User selects the Destination.
+\item	User selects the number of tickets.
+\item	User selects the payment option (Credit/Debit/ Cash)
+\item	User enters his/her pin number (if Credit/Debit card is inserted)
+
+ 
+\end{itemize}
+}\\
+\hline
+{Exception Flow: } & {
+\begin{itemize}
+\item	User cancelling the process
+\item	User entering the wrong PIN number.
+
+\end{itemize}
+}\\
+\hline
+{Priority:  } & {High}\\
+\hline
+{Note:  } & {
+\begin{itemize}
+\item	The Fares may depend on the number of tickets selected.
+\item	User must enter Valid Pin number.
+\end{itemize}
+}\\
+\hline
+\end{tabular}
+\caption{Purchase Ticket}
+\end{table}
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+\begin{table}[h]
+\centering
+\begin{tabular}{|p{2.4cm}|p{11cm}|}
+\hline
+{Use Case Id: } & {UC6} \\
+\hline
+{Use case name:} & { Payment}\\
+\hline
+{Actors: } & {Primary: User, Secondary: Bank}\\
+\hline
+{Description:} & {User selects all the required conditions to purchase a Ticket and selects the payment option. }\\
+\hline
+ 
+{Trigger:  } & {Selecting the payment option.}\\
+\hline
+{Preconditions:  } & {User selects the type of ticket and number of tickets.}\\
+\hline
+{Postconditions:} & {Payment has been made and ticket is printed.}\\
+\hline
+{Normal Flow: } & {
+\begin{itemize}
+
+\item		The TVM will display the option of language (French/English).
+\item	User will have to choose one of the two options or else the TVM follows the default language.
+\item	TVM displays either to buy Rechargeable/Non-Rechargeable ticket.
+\item	User selects the type of ticket.
+\item	User selects the payment option (Credit/Debit/Cash)
+\item	User enters his/her pin number (if Credit/Debit card is inserted)
+\item	User inserts the Cash in the machine (If Cash is selected).
+
+
+
+
+ 
+\end{itemize}
+}\\
+\hline
+{Exception Flow: } & {
+\begin{itemize}
+
+\item		User cancelling the process
+\item	User entering the wrong PIN number.
+\item	User inserting invalid currency.
+\item	User not inserting sufficient Money.
+
+\end{itemize}
+}\\
+\hline
+{Priority:  } & {High}\\
+\hline
+{Note:  } & {
+\begin{itemize}
+
+\item		User must enter Valid Pin number.
+\item	User must insert valid Currency.
+\item	User must insert required amount of money or more.
+
+
+
+\end{itemize}
+}\\
+\hline
+\end{tabular}
+\caption{Payment}
+\end{table}
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+\begin{table}[h]
+\centering
+\begin{tabular}{|p{2.4cm}|p{11cm}|}
+\hline
+{Use Case Id: } & {UC7} \\
+\hline
+{Use case name:} & {Print Ticket}\\
+\hline
+{Actors: } & {Primary: User}\\
+\hline
+{Description:} & {Prints ticket after the required transactions are done.}\\
+\hline
+ 
+{Trigger:  } & {User selects print ticket option.}\\
+\hline
+{Preconditions:  } & {Payment confirmation from bank or machine (if used cash)}\\
+\hline
+{Postconditions:} & {Ticket is printed.}\\
+\hline
+{Normal Flow: } & {
+\begin{itemize}
+
+\item	The TVM will display the option of language (French/English).
+\item	User will have to choose one of the two options or else the TVM follows the default language.
+\item	TVM displays either to buy Rechargeable/Non-Rechargeable ticket.
+\item	User selects Non-Rechargeable ticket.
+\item	User selects the Destination.
+\item	User selects the number of tickets.
+\item	User selects the payment option (Credit/Debit/Cash)
+\item	User enters his/her pin number (if Credit/Debit card is inserted)
+\item	User selects Print Ticket option.
+
+
+
+ 
+\end{itemize}
+}\\
+\hline
+{Exception Flow: } & {
+\begin{itemize}
+
+\item	User cancelling the process
+\item	User entering the wrong PIN number.
+
+\end{itemize}
+}\\
+\hline
+{Priority:  } & {High}\\
+\hline
+{Note:  } & {
+\begin{itemize}
+
+\item	User cancelling the process
+\item	User entering the wrong PIN number.
+
+
+\end{itemize}
+}\\
+\hline
+\end{tabular}
+\caption{Print Ticket}
+\end{table}
+
+\begin{table}[h]
+\centering
+\begin{tabular}{|p{2.4cm}|p{11cm}|}
+\hline
+{Use Case Id: } & {UC8} \\
+\hline
+{Use case name:} & {Return Change}\\
+\hline
+{Actors: } & {Primary: User}\\
+\hline
+{Description:} & {If User overpays the money, machine returns the remaining money. }\\
+\hline
+ 
+{Trigger:  } & {User overpays the money.}\\
+\hline
+{Preconditions:  } & {User makes payment by cash.}\\
+\hline
+{Postconditions:} & {User receives the remaining amount.}\\
+\hline
+{Normal Flow: } & {
+\begin{itemize}
+
+\item	User selects the ticket type
+\item	User selects payment by cash.
+\item	If user overpays the money, the TVM returns the remaining amount.
+
+
+
+ 
+\end{itemize}
+}\\
+\hline
+{Exception Flow: } & {
+\begin{itemize}
+
+\item	User cancelling the process
+\item	If user pays through card
+
+
+\end{itemize}
+}\\
+\hline
+{Priority:  } & {High}\\
+\hline
+{Note:  } & {
+\begin{itemize}
+\item	User have to use valid currency for the TVM to accept the transaction.
+
+\end{itemize}
+}\\
+\hline
+\end{tabular}
+\caption{Return Change}
+\end{table}
+
+
+
+
+
+
+
+
+
+
+
+
+\clearpage
+\section{Relevant System Sequence Diagrams:}
+
+\subsubsection{Purchase Ticket:}
+\begin{figure}[htp]
+\includegraphics[width = 12cm]{images/image1.jpg} 
+    \centering
+\end{figure}
+\clearpage
+\subsubsection{Recharge E-Card:}
+\begin{figure}[htp]
+\includegraphics[width = 12cm]{images/image2.jpg} 
+    \centering
+\end{figure}
+
+\begin{thebibliography}{1}
+
+  \bibitem{notes} PANKAJ KAMTHAN. (2019). UNDERSTANDING CONTEXT. {\url{ https://users.encs.concordia.ca/~kamthan/courses/soen-6481/understanding_context.pdf}},
+
+ \bibitem{notes} PANKAJ KAMTHAN. (2019). INTRODUCTION TO DOMAIN MODELLING.
+ {\url{https://users.encs.concordia.ca/~kamthan/courses/soen-6481/domain_modeling_introduction.pdf}}
+
+ \bibitem{notes} PANKAJ KAMTHAN. (2019). NEGATIVE USE CASE MODELLING.
+ {\url{https://users.encs.concordia.ca/~kamthan/courses/soen-6481/use_case_modeling_negative.pdf}}
+
+  
+  \end{thebibliography}
+
+
+
+\end{document}

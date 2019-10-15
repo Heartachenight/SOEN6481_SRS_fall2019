@@ -1,0 +1,33 @@
+\boolfalse {citerequest}\boolfalse {citetracker}\boolfalse {pagetracker}\boolfalse {backtracker}\relax 
+\defcounter {refsection}{0}\relax 
+\contentsline {chapter}{\numberline {1}Problem 1}{1}% 
+\defcounter {refsection}{0}\relax 
+\contentsline {section}{\numberline {1.1}Brief Description of TVM}{1}% 
+\defcounter {refsection}{0}\relax 
+\contentsline {chapter}{\numberline {2}Problem 2}{2}% 
+\defcounter {refsection}{0}\relax 
+\contentsline {section}{\numberline {2.1}Context of Use Model (CUTVM)}{2}% 
+\defcounter {refsection}{0}\relax 
+\contentsline {section}{\numberline {2.2}Details of Contextual Factors:}{3}% 
+\defcounter {refsection}{0}\relax 
+\contentsline {chapter}{\numberline {3}Problem 3}{5}% 
+\defcounter {refsection}{0}\relax 
+\contentsline {section}{\numberline {3.1}Domain Model Introduction}{5}% 
+\defcounter {refsection}{0}\relax 
+\contentsline {section}{\numberline {3.2}Domain Model Diagram}{5}% 
+\defcounter {refsection}{0}\relax 
+\contentsline {section}{\numberline {3.3}Domain Model Description }{6}% 
+\defcounter {refsection}{0}\relax 
+\contentsline {section}{\numberline {3.4}Relationships}{6}% 
+\defcounter {refsection}{0}\relax 
+\contentsline {chapter}{\numberline {4}Problem 4}{8}% 
+\defcounter {refsection}{0}\relax 
+\contentsline {section}{\numberline {4.1}Different Views for Use Case}{8}% 
+\defcounter {refsection}{0}\relax 
+\contentsline {section}{\numberline {4.2}Description of relevant Use Cases:}{10}% 
+\defcounter {refsection}{0}\relax 
+\contentsline {section}{\numberline {4.3}Relevant System Sequence Diagrams:}{18}% 
+\defcounter {refsection}{0}\relax 
+\contentsline {subsubsection}{Purchase Ticket:}{18}% 
+\defcounter {refsection}{0}\relax 
+\contentsline {subsubsection}{Recharge E-Card:}{19}% 
