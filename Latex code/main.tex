@@ -5,9 +5,22 @@
 \usepackage{lipsum}
 \usepackage{caption}
 \usepackage{biblatex}
-
+\usepackage{xcolor}
+\usepackage{blindtext}
+\usepackage[most]{tcolorbox}
  \usepackage{url}
 \addbibresource{ref.bib}
+
+
+
+\fboxsep=10mm%padding thickness
+\fboxrule=4pt%border thickness
+
+
+
+
+
+
 
 \begin{document}
 
@@ -79,9 +92,12 @@ In each metro station, there is a minimum of one Ticket Vending Machine. To shie
 \section{Context of Use Model (CUTVM)}
 
 \begin{figure}[htp]
-\includegraphics[width = 10cm]{images/prob2.PNG} 
-    \centering
+\begin{center}
+\includegraphics[width=14cm,height=14cm]{images/CUigo2.JPG}
+      \centering
     \caption{List of Contextual Factors }
+\end{center}
+  
 \end{figure}
 \newpage
 
@@ -224,7 +240,7 @@ A domain model in problem solving and software engineering is a conceptual model
 \section{Domain Model Diagram}
 
 \begin{figure}[htp]
-\includegraphics[width = 14cm]{images/image3.jpg} 
+ \includegraphics[width = 15cm]{images/DOMAIN.JPG}
     \centering
     \caption{Domain Model}
 \end{figure}
@@ -280,7 +296,7 @@ Some of the multiplicity symbols, we used in our Domain Model are:
 \end{itemize}
 
 \begin{figure}[htp]
-\includegraphics[width = 12cm]{images/table2.PNG} 
+\includegraphics[width = 15cm, height = 20cm ]{images/CUigo2.JPG} 
     \centering
      \caption{List of All concepts and their Relationships}
 \end{figure}
@@ -291,14 +307,14 @@ Some of the multiplicity symbols, we used in our Domain Model are:
 
 
 \begin{figure}[htp]
-\includegraphics[width = 15cm]{images/image4.jpg} 
+\includegraphics[width = 15cm,height = 15cm]{images/PosUc.JPG} 
     \centering
     \caption{Positive Use Case Scenario}
 \end{figure}
 \clearpage
 
 \begin{figure}[htp]
-\includegraphics[width = 18cm]{images/image6.jpg} 
+\includegraphics[width = 18cm,height = 17cm]{images/NegUc.JPG} 
     \centering
     \caption{Negative Use Case Scenario}
 \end{figure}
@@ -773,16 +789,24 @@ Some of the multiplicity symbols, we used in our Domain Model are:
 
 \subsubsection{Purchase Ticket:}
 \begin{figure}[htp]
-\includegraphics[width = 12cm]{images/image1.jpg} 
+\includegraphics[width = 12cm]{images/SEQ1.JPG} 
     \centering
 \end{figure}
 \clearpage
 \subsubsection{Recharge E-Card:}
 \begin{figure}[htp]
-\includegraphics[width = 12cm]{images/image2.jpg} 
+\includegraphics[width = 12cm,height = 17cm]{images/Seq2.JPG} 
     \centering
 \end{figure}
+\clearpage
+\section{Relevant Activity Diagram for the TVM system}
 
+
+\begin{figure}[htp]
+\includegraphics[width = 12cm,height = 18cm]{images/ACTI.JPG} 
+    \centering
+\end{figure}
+\clearpage
 \begin{thebibliography}{1}
 
   \bibitem{notes} PANKAJ KAMTHAN. (2019). UNDERSTANDING CONTEXT. {\url{ https://users.encs.concordia.ca/~kamthan/courses/soen-6481/understanding_context.pdf}},
